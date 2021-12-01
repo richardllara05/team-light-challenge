@@ -54,5 +54,7 @@ gradle test --info
 Features
 --------
 * Docker Support
+* CircleCI Support
 * JUnit Testing
 * Exposed Port 8080
+* Pre-recieve hook
