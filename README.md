@@ -1,6 +1,6 @@
 Team LightFeather Challenge
 ===========================
-> Fun coding challenge for Team Lighteather. 
+> Fun coding challenge for Team LightFeather. 
 REST API built with Spring Framework.
 
 Getting Started
