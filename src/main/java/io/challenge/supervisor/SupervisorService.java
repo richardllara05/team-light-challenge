@@ -14,6 +14,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
+import io.challenge.exceptions.SupervisorException;
+
 @Service
 public class SupervisorService {
 
@@ -95,7 +97,7 @@ public class SupervisorService {
 						Supervisor.class);
 
 				if (!(supervisors.stream().anyMatch(s -> s.equals(supervisor)))) {
-					throw new InvalidSupervisorException("Invalid supervisor: " + supervisorJson);
+					throw new SupervisorException("Invalid supervisor: " + supervisorJson);
 				}
 
 				responseJson.putRawValue("supervisor", new RawValue(objectMapper.writeValueAsString(supervisor)));
@@ -113,7 +115,7 @@ public class SupervisorService {
 				e.printStackTrace();
 
 				return errorEntity;
-			} catch (InvalidSupervisorException e) {
+			} catch (SupervisorException e) {
 				errorJson.put("error", "Invalid supervisor name");
 				System.err.println("JSON Parsing Error");
 				e.printStackTrace();
