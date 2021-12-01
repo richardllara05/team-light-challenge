@@ -1,4 +1,4 @@
-package io.challenge.lightfeather;
+package io.challenge.lightfeather.integration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -21,6 +21,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.WebClientResponseException;
 
+import io.challenge.lightfeather.Application;
 import io.challenge.supervisor.Supervisor;
 import net.minidev.json.JSONObject;
 import reactor.core.publisher.Mono;
